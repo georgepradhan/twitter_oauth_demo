@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Welcome to Sinatra!</h1>
+  <p>
+    <%=Twitter.search("to:justinbieber marry me", :count => 3, :result_type => "recent").results.map do |status|
+      "#{status.from_user}: #{status.text}"
+    end%></p>
+</div>
